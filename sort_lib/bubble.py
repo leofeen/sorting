@@ -4,19 +4,16 @@ def bubble(unsorted_list:list) -> list:
     if (not unsorted_list) or len(unsorted_list) == 1:
         return unsorted_list
     
-    list_to_sort = unsorted_list.copy()
     unsorted = True
     iteration = 1
     while unsorted:
         unsorted = False
-        for i in range(0, len(list_to_sort) - iteration):
-            if list_to_sort[i] > list_to_sort[i+1]:
-                swap = list_to_sort[i+1]
-                list_to_sort[i+1] = list_to_sort[i]
-                list_to_sort[i] = swap
+        for i in range(0, len(unsorted_list) - iteration):
+            if unsorted_list[i] > unsorted_list[i+1]:
+                unsorted_list[i], unsorted_list[i+1] = unsorted_list[i+1], unsorted_list[i]
                 unsorted = True
         iteration += 1
-    return list_to_sort
+    return unsorted_list
 
 
 if __name__ == '__main__':

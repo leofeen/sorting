@@ -2,8 +2,9 @@ import timeit
 from sort_lib.merge import merge
 from sort_lib.bubble import bubble
 from sort_lib.insertion import insertion
+from sort_lib.quick import quick
 
-sorting_function = input('bubble, merge, insertion? ')
+sorting_function = input('bubble, merge, insertion, quick? ')
 setup = f'from __main__ import {sorting_function}'
 number = int(input('0, 1, 10 or bigger than 100 elements in list (single number): '))
 if number == 0:
